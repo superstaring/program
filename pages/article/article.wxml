@@ -1,0 +1,11 @@
+<!--pages/article/article.wxml-->
+<view class="container">
+  <button bindtap="back" type="primary" >回退</button>
+  <!-- 数组默认为item -->
+  <view wx:for="{{lists}}" wx:key="{{item.id}}">{{index+1}}:{{item.title}}</view>
+------------
+  <view wx:for="{{lists}}" wx:key="{{item.id}}" wx:for-item="list" wx:for-key="index">{{index+1}}:{{list.title}}</view>
+  <view wx:if="{{lists.length>2}}">总共：{{lists.length}}条数据</view>
+
+<view wx:for="{{todo}}" wx:key="{{item.id}}">{{item.title}}</view>  
+</view>
